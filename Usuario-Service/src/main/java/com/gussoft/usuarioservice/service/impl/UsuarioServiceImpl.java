@@ -83,13 +83,13 @@ public class UsuarioServiceImpl implements UsuarioService {
         }
         result.put("Usuario", usuario);
         List<Carro> carros = cfClient.getCarros(userId);
-        if (carros.isEmpty()) {
+        if (carros == null) {
             result.put("Carros", "El usuario no tiene carros.");
         } else {
             result.put("Carros", carros);
         }
         List<Moto> motos = bfClient.getMotos(userId);
-        if (motos.isEmpty()) {
+        if (motos == null) {
             result.put("Motos", "El usuario no tiene Motos.");
         } else {
             result.put("Motos", motos);
