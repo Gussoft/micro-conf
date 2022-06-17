@@ -1,4 +1,3 @@
-
 server:
   port: 9090
 spring:
@@ -7,7 +6,7 @@ spring:
       server:
         git:
           default-label: config-server
-          uri: https://github.com/Gussoft/micro-conf/tree/master
+          uri: https://github.com/Gussoft/micro-conf
           search-paths: config-data
   application:
     name: config-service
