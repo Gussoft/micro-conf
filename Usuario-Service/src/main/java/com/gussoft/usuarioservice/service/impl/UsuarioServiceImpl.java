@@ -49,13 +49,13 @@ public class UsuarioServiceImpl implements UsuarioService {
     //Core de Microservicos
     @Override
     public List<Carro> getCars(int usuarioId) {
-        List<Carro> obj = template.getForObject("http://localhost:9092/carros/usuarios/" + usuarioId, List.class);
+        List<Carro> obj = template.getForObject("http://carro-service/carros/usuarios/" + usuarioId, List.class); //localhost:9092
         return obj;
     }
 
     @Override
     public List<Moto> getBikes(int usuarioId) {
-        List<Moto> obj = template.getForObject("http://localhost:9093/motos/usuarios/" + usuarioId, List.class);
+        List<Moto> obj = template.getForObject("http://moto-service/motos/usuarios/" + usuarioId, List.class); //localhost:9093
         return obj;
     }
 
